@@ -2,9 +2,9 @@ name: Begapp Game
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
   workflow_dispatch:
 
@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v2.7.0
         with:
           push: true
-          tags: ${{ secrets.REGISTRY_URL }}/begapp/begapp-game:dev
+          tags: ${{ secrets.REGISTRY_URL }}/begapp-legacy/begapp-game:dev
           file: teoria_dos_jogos/Dockerfile
           context: ./teoria_dos_jogos
