@@ -12,32 +12,20 @@ import 'package:teoria_dos_jogos/AppLanguage.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/connection.dart';
 import 'package:teoria_dos_jogos/classes/maxLength.dart';
-import 'package:teoria_dos_jogos/classes/myconverter.dart';
 import 'package:teoria_dos_jogos/classes/user.dart';
 import 'package:teoria_dos_jogos/pages/UserForms.page.dart';
 import 'package:teoria_dos_jogos/pages/pdf.page.dart';
+import 'package:teoria_dos_jogos/pages/welcome.page.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/classes/dilemmaVariables.dart';
 import 'package:teoria_dos_jogos/public_goods/classes/publicGoodsVariables.dart';
 // import 'package:teoria_dos_jogos/public_goods/pages/publicGoodsVariables.dart';
 
 import 'package:teoria_dos_jogos/classes/rotation.dart';
-import 'package:teoria_dos_jogos/public_goods/pages/PublicGoodsTutorial.page.dart';
-import 'package:teoria_dos_jogos/public_goods/pages/electionTutorial.page.dart';
-import 'package:teoria_dos_jogos/public_goods/pages/game.page.dart';
-import 'package:teoria_dos_jogos/public_goods/pages/messagePage.dart';
-import 'package:teoria_dos_jogos/public_goods/widgets/token.dart';
 import 'package:universal_platform/universal_platform.dart';
 
-import 'audioTestPage.dart';
 import 'classes/Database.dart';
-import 'classes/time_taken_tutorial_pd.dart';
-import 'classes/time_taken_tutorial_pg.dart';
-import 'pages/welcome.page.dart';
-import 'prisoners_dilemma/pages/game.page.dart';
 import 'prisoners_dilemma/pages/tutorial.page.dart';
 import 'package:http/http.dart' as http;
-
-import 'public_goods/pages/distributionTutorial.page.dart';
 
 const _filesToWarmup = [
   "assets/flare/Coins.flr",
@@ -88,58 +76,58 @@ class MyApp extends StatelessWidget {
       child: Consumer<AppLanguage>(builder: (context, model, child) {
         // appLanguage.changeLanguage(Locale("pt"));
         return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            locale: model.appLocal,
-            supportedLocales: [
-              Locale('en', 'US'),
-              Locale('pt', 'BR'),
-            ],
-            localizationsDelegates: [
-              AppLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-            ],
-            theme: ThemeData(
-              primarySwatch: Colors.blueGrey,
-            ),
-            title: "BeGapp",
-            home: //Myteste()
-                //PublicGoodsCircle(PublicGoodsVariables("",10,10,3,10,0,5,"default","jogo padrão"))
-                // PublicGoodsTutorialPage(
-                //     null, PublicGoodsVariables.fromJson(jsonHelp[0]))
-                //     ChooseGamePage(
-                //   title: "",
-                //   jsonHelp: jsonHelp,
-                // )
-                // MessagePage(
-                //     message:
-                //         "A maioria das pessoa da sua idade contribuiu mais do que voce,voce estar jogando com um palmeirense aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbcc")
-                //     PublicGoodsTutorialPage(
-                //   new User(),
-                //   PublicGoodsVariables.fromJson(jsonHelp[0]),
-                // )
-                // PublicGoodsGamePage(
-                //     new User(),
-                //     PublicGoodsVariables.fromJson(jsonHelp[0]),
-                //     new PGTimeTutorial(), [])
-                // Container()
-                // ElectionTutorial(
-                //     PublicGoodsVariables.fromJson(jsonHelp[0]), null, null)
-                //  ChooseGamePage(),
-                //     UserForms(
-                //   "PublicGoods",
-                //   lengths: [MaxLength(50), MaxLength(50), MaxLength(50)],
-                // ),
-                // WelcomePage(),
-                // AudioTest()
-                // PdfPage()
-                DilemmaTutorialPage(
-              new User(),
-              DilemmaVariables.fromJson(jsonHelp[0]),
-            )
-            // DilemmaGamePage(null, DilemmaVariables.fromJson(jsonHelp[0]),
-            //     null, "Sua escolha", "Escolha do outro(a)", []),
-            );
+          debugShowCheckedModeBanner: false,
+          locale: model.appLocal,
+          supportedLocales: [
+            Locale('en', 'US'),
+            Locale('pt', 'BR'),
+          ],
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+          ],
+          theme: ThemeData(
+            primarySwatch: Colors.blueGrey,
+          ),
+          title: "BeGapp",
+          home: //Myteste()
+              //PublicGoodsCircle(PublicGoodsVariables("",10,10,3,10,0,5,"default","jogo padrão"))
+              // PublicGoodsTutorialPage(
+              //     null, PublicGoodsVariables.fromJson(jsonHelp[0]))
+              //     ChooseGamePage(
+              //   title: "",
+              //   jsonHelp: jsonHelp,
+              // )
+              // MessagePage(
+              //     message:
+              //         "A maioria das pessoa da sua idade contribuiu mais do que voce,voce estar jogando com um palmeirense aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbcc")
+              //     PublicGoodsTutorialPage(
+              //   new User(),
+              //   PublicGoodsVariables.fromJson(jsonHelp[0]),
+              // )
+              // PublicGoodsGamePage(
+              //     new User(),
+              //     PublicGoodsVariables.fromJson(jsonHelp[0]),
+              //     new PGTimeTutorial(), [])
+              // Container()
+              // ElectionTutorial(
+              //     PublicGoodsVariables.fromJson(jsonHelp[0]), null, null)
+              //  ChooseGamePage(),
+              //     UserForms(
+              //   "PublicGoods",
+              //   lengths: [MaxLength(50), MaxLength(50), MaxLength(50)],
+              // ),
+              WelcomePage(),
+          // AudioTest()
+          // PdfPage()
+          //     DilemmaTutorialPage(
+          //   new User(),
+          //   DilemmaVariables.fromJson(jsonHelp[0]),
+          // )
+          // DilemmaGamePage(null, DilemmaVariables.fromJson(jsonHelp[0]),
+          //     null, "Sua escolha", "Escolha do outro(a)", []),
+        );
       }),
     );
   }

@@ -148,7 +148,7 @@ class _UserFormsState extends State<UserForms> {
                         AppLocalizations.of(context).translate('age')),
                     keyboardType: TextInputType.number,
                     inputFormatters: <TextInputFormatter>[
-                      WhitelistingTextInputFormatter.digitsOnly
+                      FilteringTextInputFormatter.digitsOnly
                     ],
                     onChanged: (value) {
                       _formKey.currentState!.validate();
