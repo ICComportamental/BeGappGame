@@ -5,8 +5,8 @@ FROM haizen/flutter:2.10.2-1-alpine AS build-env
 RUN flutter doctor
 
 # Specify flutter version and enable flutter web
-#RUN flutter channel master
-#RUN flutter upgrade
+RUN flutter channel master
+RUN flutter upgrade
 RUN flutter config --enable-web
 
 # Copy files to container
