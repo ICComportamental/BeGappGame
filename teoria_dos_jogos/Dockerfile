@@ -5,8 +5,8 @@ FROM cirrusci/flutter:2.10.3 AS build-env
 RUN flutter doctor
 
 # Specify flutter version and enable flutter web
-RUN flutter channel master
-RUN flutter upgrade
+#RUN flutter channel master
+#RUN flutter upgrade
 RUN flutter config --enable-web
 
 # Copy files to container
