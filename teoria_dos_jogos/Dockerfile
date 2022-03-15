@@ -1,5 +1,5 @@
 # Install Operating system and dependencies
-FROM haizen/flutter:2.10.2-1 AS build-env
+FROM haizen/flutter:2.10.2-1-alpine AS build-env
 
 # Run flutter doctor
 RUN flutter doctor
