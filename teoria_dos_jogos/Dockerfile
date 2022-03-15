@@ -16,7 +16,7 @@ COPY . /app/
 WORKDIR /app/
 
 # Build application
-#RUN flutter pub upgrade
+RUN flutter pub upgrade
 RUN flutter build web
 
 # Stage 2 - Create the run-time image
