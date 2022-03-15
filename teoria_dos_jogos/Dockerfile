@@ -1,5 +1,5 @@
 # Install Operating system and dependencies
-FROM cirrusci/flutter:2.10.3 AS build-env
+FROM haizen/flutter:2.10.2-1-alpine AS build-env
 
 # Run flutter doctor
 RUN flutter doctor
