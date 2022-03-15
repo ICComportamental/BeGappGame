@@ -5,8 +5,8 @@ FROM cirrusci/flutter:2.10.3 AS build-env
 RUN flutter doctor
 
 # Specify flutter version and enable flutter web
-#RUN flutter channel stable
-#RUN flutter downgrade v2.5.3
+RUN flutter channel stable
+RUN flutter upgrade
 RUN flutter config --enable-web
 
 # Copy files to container
@@ -16,7 +16,7 @@ COPY . /app/
 WORKDIR /app/
 
 # Build application
-RUN flutter pub upgrade
+#RUN flutter pub upgrade
 RUN flutter build web
 
 # Stage 2 - Create the run-time image
