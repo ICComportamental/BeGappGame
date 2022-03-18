@@ -1,4 +1,4 @@
-import 'package:flutter/services.Dart';
+import 'package:flutter/services.dart';
 
     /// blocks rotation; sets orientation to: portrait
      portraitModeOnly() {
