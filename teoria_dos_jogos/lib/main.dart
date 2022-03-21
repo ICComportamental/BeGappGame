@@ -286,8 +286,8 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
           _keyLoader.currentContext!,
         ).pop(); //close the dialoge
         try {
-          final response = await http.head(Uri.parse(
-              'https://ccompjr.com.br/BeGapp/files/${variables.key}.pdf'));
+          final response = await http.head(
+              Uri.parse('https://v1.begapp.com.br/files/${variables.key}.pdf'));
           if (response.statusCode == 200) {
             Navigator.push(
                 context,

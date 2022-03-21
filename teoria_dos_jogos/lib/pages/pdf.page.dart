@@ -45,9 +45,9 @@ class _PdfPageState extends State<PdfPage> {
             //         Container(
             //   child: SfPdfViewer.network(
             //     // "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf",
-            //     'https://ccompjr.com.br/BeGapp/files/pg61925.pdf',
-            //     // "https://ccompjr.com.br/BeGapp/loadPdf.php",
-            //     // 'https://ccompjr.com.br/BeGapp/files/${widget.pdfName}.pdf',
+            //     'https://v1.begapp.com.br/files/pg61925.pdf',
+            //     // "https://v1.begapp.com.br/loadPdf.php",
+            //     // 'https://v1.begapp.com.br/files/${widget.pdfName}.pdf',
             //     controller: _pdfViewerController,
             //   ),
             // ));
@@ -58,8 +58,8 @@ class _PdfPageState extends State<PdfPage> {
           flex: 4,
           child: Container(
             child: SfPdfViewer.network(
-              'https://ccompjr.com.br/BeGapp/files/pg61925.pdf',
-              // 'https://ccompjr.com.br/BeGapp/files/${widget.pdfName}.pdf',
+              'https://v1.begapp.com.br/files/pg61925.pdf',
+              // 'https://v1.begapp.com.br/files/${widget.pdfName}.pdf',
               controller: _pdfViewerController,
             ),
           ),

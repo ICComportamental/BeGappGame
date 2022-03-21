@@ -17,14 +17,14 @@ class Database {
   }
 
   static select(String query) async {
-    String url = "https://ccompjr.com.br/BeGapp/select.php";
+    String url = "https://v1.begapp.com.br/select.php";
     var res = await http.post(Uri.parse(url),
         headers: {"Accept": "application/json"}, body: {"query": query});
     return res.body;
   }
 
   static insert(String query) async {
-    String url = "https://ccompjr.com.br/BeGapp/insert.php";
+    String url = "https://v1.begapp.com.br/insert.php";
     var res = await http.post(Uri.parse(url),
         headers: {"Accept": "application/json"}, body: {"query": query});
     // print(res.body);
@@ -59,7 +59,7 @@ class Database {
   }
 
   static insertUser(User user) async {
-    String theUrl = 'https://ccompjr.com.br/BeGapp/InsertUser.php';
+    String theUrl = 'https://v1.begapp.com.br/InsertUser.php';
     // print(user.name +
     //     user.age +
     //     user.cours +
@@ -92,7 +92,7 @@ class Database {
         compete++;
       }
       int round = i + 1;
-      String theUrl = 'https://ccompjr.com.br/BeGapp/dilemma/InsertRound.php';
+      String theUrl = 'https://v1.begapp.com.br/dilemma/InsertRound.php';
       var res = await http.post(Uri.parse(theUrl), headers: {
         "Accept": "application/json"
       }, body: {
@@ -117,8 +117,7 @@ class Database {
   }
 
   static getDilemmaVariables() async {
-    String theUrl =
-        'https://ccompjr.com.br/BeGapp/dilemma/dilemma_variables.php';
+    String theUrl = 'https://v1.begapp.com.br/dilemma/dilemma_variables.php';
 
     var res = await http.get(
       Uri.parse(theUrl),
