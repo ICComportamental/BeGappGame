@@ -124,7 +124,7 @@ class _UserFormsState extends State<UserForms> {
                     validator: validatorNickname,
                     inputFormatters: [
                       new LengthLimitingTextInputFormatter(
-                          widget.lengths![0].character_maximum_length),
+                          widget.lengths![0].CHARACTER_MAXIMUM_LENGTH),
                     ],
                     controller: txtName,
                     onChanged: (value) async {
@@ -263,7 +263,7 @@ class _UserFormsState extends State<UserForms> {
                     },
                     inputFormatters: [
                       new LengthLimitingTextInputFormatter(
-                          widget.lengths![1].character_maximum_length),
+                          widget.lengths![1].CHARACTER_MAXIMUM_LENGTH),
                     ],
                   ),
                 ),
@@ -323,7 +323,7 @@ class _UserFormsState extends State<UserForms> {
                           },
                           inputFormatters: [
                             new LengthLimitingTextInputFormatter(
-                                widget.lengths![2].character_maximum_length),
+                                widget.lengths![2].CHARACTER_MAXIMUM_LENGTH),
                           ],
                         ),
                       )

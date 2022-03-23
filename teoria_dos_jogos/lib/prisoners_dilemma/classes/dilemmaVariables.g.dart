@@ -8,12 +8,12 @@ part of 'dilemmaVariables.dart';
 
 DilemmaVariables _$DilemmaVariablesFromJson(Map<String, dynamic> json) =>
     DilemmaVariables(
-      json['key'] as String,
-      json['algorithm'] as String,
-      json['secondAlgorithm'] as String,
-      json['dependentVariable'] as String,
-      json['independentVariable'] as String,
-      json['gameName'] as String,
+      json['key'] as String?,
+      json['algorithm'] as String?,
+      json['secondAlgorithm'] as String?,
+      json['dependentVariable'] as String?,
+      json['independentVariable'] as String?,
+      json['gameName'] as String?,
       MyConverter.stringToInt(json['bothCooperate'] as String),
       MyConverter.stringToInt(json['bothDefect'] as String),
       MyConverter.stringToInt(json['cooperateLoses'] as String),
@@ -29,7 +29,7 @@ DilemmaVariables _$DilemmaVariablesFromJson(Map<String, dynamic> json) =>
       MyConverter.stringToBool(json['otherPointsRand'] as String),
       DateTime.parse(json['start'] as String),
       DateTime.parse(json['end'] as String),
-      json['formLink'] as String,
+      json['formLink'] as String?,
     )
       ..adminId = json['adminId'] as String?
       ..publicConfig = MyConverter.stringToInt(json['publicConfig'] as String)

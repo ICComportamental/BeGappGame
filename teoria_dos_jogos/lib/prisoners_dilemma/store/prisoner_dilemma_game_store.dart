@@ -395,7 +395,7 @@ abstract class _PrisonerDilemmaGameBase with Store {
                               color: Colors.lightBlue,
                               fontSize: Resize.getHeight(context) / 20),
                         ),
-                        onTap: () => launch(variables!.formLink))
+                        onTap: () => launch(variables!.formLink!))
                   ]),
 
               actions: <Widget>[

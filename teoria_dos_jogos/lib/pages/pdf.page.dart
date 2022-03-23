@@ -58,8 +58,8 @@ class _PdfPageState extends State<PdfPage> {
           flex: 4,
           child: Container(
             child: SfPdfViewer.network(
-              'https://v1.begapp.com.br/files/pg61925.pdf',
-              // 'https://v1.begapp.com.br/files/${widget.pdfName}.pdf',
+              //'https://v1.begapp.com.br/files/pg61925.pdf',
+              'https://v1.begapp.com.br/files/${widget.pdfName}.pdf',
               controller: _pdfViewerController,
             ),
           ),
@@ -74,13 +74,43 @@ class _PdfPageState extends State<PdfPage> {
                   readEnd = _pdfViewerController!.pageNumber ==
                       _pdfViewerController!.pageCount;
 
-                  if (readEnd) read = value!;
+                  if (readEnd)
+                    read = value!;
+                  else
+                    showDialog(
+                        context: context,
+                        builder: (_) => AlertDialog(
+                              content: Text(
+                                // "Você ainda não chegou até ao final do documento, termine a leitura para prosseguir.",
+                                AppLocalizations.of(context)
+                                    .translate('Didnt finished the read'),
+                                style: TextStyle(
+                                    fontSize:
+                                        MediaQuery.of(context).size.height /
+                                            30),
+                              ),
+                              actions: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text(
+                                      AppLocalizations.of(context)
+                                          .translate('ok'),
+                                      style: TextStyle(
+                                          fontSize: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              30),
+                                    )),
+                              ],
+                            ));
                 });
               },
             ),
             Text(
-              "Li e concordo com os termos",
-              //AppLocalizations.of(context).translate('useNextLevel'),
+              // "Li e concordo com os termos",
+              AppLocalizations.of(context).translate('Read and agreed'),
               style: TextStyle(fontSize: Resize.getWidth(context) * 0.05),
             )
           ],

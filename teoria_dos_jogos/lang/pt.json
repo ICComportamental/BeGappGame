@@ -10,6 +10,9 @@
     "invalidCode":"Código invalido!",
     "codeNotReady":"Esse código será liberado as ",
 
+    "Read and agreed":"Li e concordo com os termos",
+    "Didnt finished the read":"Você ainda não chegou até ao final do documento, termine a leitura para prosseguir.",
+
     "name" : "Nome:",
     "nickname" : "Apelido",
     "nicknameUnavailable" : "Nome indisponível",

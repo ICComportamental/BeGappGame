@@ -7,10 +7,10 @@ part of 'maxLength.dart';
 // **************************************************************************
 
 MaxLength _$MaxLengthFromJson(Map<String, dynamic> json) => MaxLength(
-      MaxLength._stringToInt(json['character_maximum_length'] as String),
+      MaxLength._stringToInt(json['CHARACTER_MAXIMUM_LENGTH'] as String?),
     );
 
 Map<String, dynamic> _$MaxLengthToJson(MaxLength instance) => <String, dynamic>{
-      'character_maximum_length':
-          MaxLength._stringFromInt(instance.character_maximum_length),
+      'CHARACTER_MAXIMUM_LENGTH':
+          MaxLength._stringFromInt(instance.CHARACTER_MAXIMUM_LENGTH),
     };

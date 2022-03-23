@@ -50,21 +50,24 @@ void main() async {
   await appLanguage.fetchLocale();
   FlareCache.doesPrune = false;
   List jsonHelp;
-  jsonHelp = await Database.validateKey("pddd6fc");
+  //jsonHelp = await Database.validateKey("pddd6fc");
   // jsonHelp = await Database.validateKey("pg12326");
   // jsonHelp = await Database.validateKey("pg4");
   warmupFlare().then((_) {
     runApp(MyApp(
       appLanguage: appLanguage,
-      jsonHelp: jsonHelp,
+      //  jsonHelp: jsonHelp,
     ));
   });
 }
 
 class MyApp extends StatelessWidget {
   final AppLanguage appLanguage;
-  final List jsonHelp;
-  MyApp({required this.appLanguage, required this.jsonHelp});
+  //final List jsonHelp;
+  MyApp({
+    required this.appLanguage,
+    /*required this.jsonHelp*/
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -237,6 +240,7 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
 
           variables = DilemmaVariables.fromJson(jsonList[0]);
           game = "PrisonerDilemma";
+          print("game:" + game);
         }
         /* parte do código que bloqueia o experimento de acordo com a data e hora 
         String theUrl =
@@ -277,7 +281,7 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
           // if(variables.start.isBefore(DateTime.now()) && variables.end.isAfter(DateTime.now())){
           */
         List<MaxLength> lengths = [];
-        lengths.add(MaxLength(await Database.getMaxLength('users', 'name')));
+        //lengths.add(MaxLength(await Database.getMaxLength('users', 'name')));
         lengths
             .add(MaxLength(await Database.getMaxLength('users', 'occupation')));
         lengths.add(MaxLength(await Database.getMaxLength('users', 'cours')));
@@ -445,6 +449,11 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
                         InkWell(
                           child: Icon(Icons.send),
                           onTap: () => _handleSubmit(context),
+                          // () async {
+                          //   List jsonHelp;
+                          //   jsonHelp = await Database.validateKey("pddd6fc");
+
+                          // }
 
                           //()=>Connection.noConnection(context)
                           // ()async{

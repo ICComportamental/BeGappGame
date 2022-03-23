@@ -10,6 +10,10 @@
     "invalidCode":"Invalid code!",
     "codeNotReady":"This code will availiable at ",
 
+    
+    "Read and agreed":"I have read and agree to the terms",
+    "Didnt finished the read":"You haven't reached the end of the document yet, finish reading to proceed.",
+
     "name" : "Name:",
     "nickname" : "Nickname",
     "nicknameUnavailable" : "Nickname unavailable",

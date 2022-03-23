@@ -11,13 +11,13 @@ class DilemmaVariables {
   late int publicData; //se os resultados do experimento são publicos
   @JsonKey(fromJson: MyConverter.stringToInt, toJson: MyConverter.stringFromInt)
   late int id;
-  final String key;
-  final String algorithm;
-  final String secondAlgorithm;
-  final String gameName;
-  late String dependentVariable;
-  late String independentVariable;
-  late String formLink;
+  final String? key;
+  final String? algorithm;
+  final String? secondAlgorithm;
+  final String? gameName;
+  String? dependentVariable;
+  String? independentVariable;
+  String? formLink;
   @JsonKey(fromJson: MyConverter.stringToInt, toJson: MyConverter.stringFromInt)
   final int bothCooperate;
   @JsonKey(fromJson: MyConverter.stringToInt, toJson: MyConverter.stringFromInt)

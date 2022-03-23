@@ -94,7 +94,7 @@ class _DilemmaTutorialPageState extends State<DilemmaTutorialPage> {
                         onPressed: () async {
                           //pega as mensagens a serem exibidas ao longo do jogo(se houverem)
                           List list = await Database.getPdExperimentMessages(
-                              widget.variables.key);
+                              widget.variables.key!);
 
                           for (int j = 0; j < list.length; j++) {
                             messages.add(

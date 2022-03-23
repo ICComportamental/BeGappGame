@@ -4,16 +4,16 @@ part 'maxLength.g.dart';
 @JsonSerializable(nullable: false)
 class MaxLength {
   @JsonKey(fromJson: _stringToInt, toJson: _stringFromInt)
-  // ignore: non_constant_identifier_names
-  final int character_maximum_length;
+  final int? CHARACTER_MAXIMUM_LENGTH;
 
-  MaxLength(this.character_maximum_length);
+  MaxLength(this.CHARACTER_MAXIMUM_LENGTH);
 
   factory MaxLength.fromJson(Map<String, dynamic> json) =>
       _$MaxLengthFromJson(json);
   Map<String, dynamic> toJson() => _$MaxLengthToJson(this);
 
-  static int _stringToInt(String number) =>
+  static int _stringToInt(String? number) =>
       number == null ? null as int : int.parse(number);
-  static String _stringFromInt(int number) => number.toString();
+
+  static String _stringFromInt(int? number) => number.toString();
 }

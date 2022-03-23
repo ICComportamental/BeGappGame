@@ -12,7 +12,7 @@ class Database {
         : "SELECT * FROM config_dilemma WHERE `key`='" + key + "'";
     // print(query);
     String body = await select(query);
-
+    print(body);
     return jsonDecode(body)['table_data'] as List;
   }
 
@@ -137,9 +137,10 @@ class Database {
 
     String body = await select(query);
     var json = jsonDecode(body)['table_data'];
-
+    print(table + "  " + body);
     MaxLength maxLength = MaxLength.fromJson(json[0]);
+    print("MAX: " + maxLength.CHARACTER_MAXIMUM_LENGTH.toString());
     // print("$column: ${maxLength.character_maximum_length}");
-    return maxLength.character_maximum_length;
+    return maxLength.CHARACTER_MAXIMUM_LENGTH;
   }
 }
