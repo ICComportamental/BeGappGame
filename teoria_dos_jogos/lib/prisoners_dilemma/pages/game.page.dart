@@ -35,9 +35,8 @@ class _DilemmaGamePageState extends State<DilemmaGamePage> {
   PrisonerDilemmaGame game = new PrisonerDilemmaGame();
   @override
   void initState() {
-    // TODO: implement initState
     landscapeModeOnly();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     super.initState();
 
     game.user = widget.user;
@@ -72,7 +71,7 @@ class _DilemmaGamePageState extends State<DilemmaGamePage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 
     double p = 0.4;
     double width = Resize.getWidth(context);

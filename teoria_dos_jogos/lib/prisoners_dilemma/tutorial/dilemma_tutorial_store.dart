@@ -1,11 +1,6 @@
-import 'dart:io';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
-import 'package:teoria_dos_jogos/classes/Database.dart';
 import 'package:teoria_dos_jogos/classes/soundEffects.dart';
-import 'package:teoria_dos_jogos/classes/user.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/classes/dilemmaVariables.dart';
 import 'package:mobx/mobx.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/store/dilemmaround_store.dart';
@@ -203,7 +198,7 @@ abstract class _PrisonerDilemmaTutorialBase with Store {
                     TextStyle(fontSize: MediaQuery.of(context).size.width / 25),
               ),
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                     child: Text(
                       AppLocalizations.of(context).translate('seeResult'),
                       style: TextStyle(

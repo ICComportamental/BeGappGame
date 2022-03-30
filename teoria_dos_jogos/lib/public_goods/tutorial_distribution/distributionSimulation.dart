@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:circle_list/circle_list.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
-import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -17,8 +16,6 @@ import 'package:teoria_dos_jogos/public_goods/store/runningNumbers.dart';
 import 'package:teoria_dos_jogos/public_goods/widgets/token.dart';
 import 'package:teoria_dos_jogos/widgets/clock.dart';
 import 'package:teoria_dos_jogos/widgets/panel.dart';
-import 'package:teoria_dos_jogos/public_goods/widgets/panelFade.dart';
-import 'package:teoria_dos_jogos/public_goods/widgets/CountNumbers.dart';
 import 'package:teoria_dos_jogos/widgets/timer.dart';
 import 'package:teoria_dos_jogos/classes/rotation.dart';
 
@@ -37,7 +34,7 @@ class _DistributionSimulationState extends State<DistributionSimulation> {
 
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     game = new Game(
         widget.user,
         widget.variables,

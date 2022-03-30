@@ -8,7 +8,6 @@ import 'package:teoria_dos_jogos/classes/resize.dart';
 import 'package:teoria_dos_jogos/classes/soundEffects.dart';
 import 'package:teoria_dos_jogos/classes/time_taken_tutorial_pd.dart';
 import 'package:teoria_dos_jogos/classes/user.dart';
-import 'package:teoria_dos_jogos/main.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/classes/dilemmaVariables.dart';
 import 'package:mobx/mobx.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/classes/popup_message_pd.dart';
@@ -399,7 +398,7 @@ abstract class _PrisonerDilemmaGameBase with Store {
                   ]),
 
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                     child: Text(
                       AppLocalizations.of(context).translate('ok'),
                       style: TextStyle(

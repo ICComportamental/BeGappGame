@@ -39,7 +39,6 @@ class _CirclePeopleState extends State<CirclePeople> {
   Widget build(BuildContext context) {
     double screenHeight = Resize.getHeight(context);
     double screenWidth = Resize.getWidth(context);
-    double fontsize = screenHeight / 15;
     return Scaffold(
       body: Center(
         child: Container(

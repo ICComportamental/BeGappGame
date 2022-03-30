@@ -1,11 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 import 'package:teoria_dos_jogos/classes/soundEffects.dart';
-import 'package:teoria_dos_jogos/classes/time_taken_round_pg.dart';
 import 'package:teoria_dos_jogos/widgets/clock.dart';
 import 'package:teoria_dos_jogos/widgets/timer.dart';
 
@@ -39,8 +37,6 @@ class _MoneyDistributionState extends State<MoneyDistribution> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
-
     if (widget.distributionTime != null) {
       Duration d = DateTime.now().difference(start);
       if (d.inSeconds > widget.time) d = Duration(seconds: widget.time);

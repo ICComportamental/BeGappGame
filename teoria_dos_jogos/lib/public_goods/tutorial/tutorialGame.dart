@@ -33,7 +33,7 @@ class _TutorialGamePageState extends State<TutorialGamePage> {
   late TutorialGameStore game;
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     game = new TutorialGameStore(
         widget.next,
         PublicGoodsVariables(

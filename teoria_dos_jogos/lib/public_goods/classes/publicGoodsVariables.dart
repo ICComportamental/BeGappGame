@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:teoria_dos_jogos/classes/myconverter.dart';
 part 'publicGoodsVariables.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable()
 class PublicGoodsVariables {
   String adminId; //id do admin criador do experimento
   @JsonKey(fromJson: MyConverter.stringToInt, toJson: MyConverter.stringFromInt)
@@ -91,16 +91,12 @@ class PublicGoodsVariables {
     switch (rule) {
       case "intermittent election disabled":
         return 1;
-        break;
       case "intermittent election enabled":
         return 2;
-        break;
       case "recurring election disabled":
         return 3;
-        break;
       case "recurring election enabled":
         return 4;
-        break;
       default:
         return 0;
     }

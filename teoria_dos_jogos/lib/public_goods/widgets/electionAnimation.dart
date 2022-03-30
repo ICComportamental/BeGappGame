@@ -34,6 +34,7 @@ class _ElectionAnimationState extends State<ElectionAnimation> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unnecessary_null_comparison
     double fontSize = (widget.fontSize != null)
         ? widget.fontSize
         : MediaQuery.of(context).size.height / 10;

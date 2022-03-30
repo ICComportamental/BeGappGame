@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:teoria_dos_jogos/AppLanguage.dart';
-import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 
 class PublicGoodsDesc extends StatelessWidget {

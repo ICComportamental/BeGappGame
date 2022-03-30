@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 
+// ignore: must_be_immutable
 class WhiteBackgroundText extends StatelessWidget {
   String txt;
   double fontScale;

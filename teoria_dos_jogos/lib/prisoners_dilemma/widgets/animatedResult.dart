@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'dilemmaCard.dart';
 
+// ignore: must_be_immutable
 class AnimatedResult extends StatefulWidget {
   Offset? offset;
   Color? color1;
@@ -34,7 +35,6 @@ class _AnimatedResultState extends State<AnimatedResult>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     controller = AnimationController(

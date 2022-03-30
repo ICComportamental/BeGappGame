@@ -1,8 +1,4 @@
-import 'dart:io';
-import 'package:http/http.dart' as http;
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
@@ -23,7 +19,6 @@ class _PdfPageState extends State<PdfPage> {
   bool readEnd = false;
   @override
   void initState() {
-    // TODO: implement initState
     _pdfViewerController = PdfViewerController();
 
     super.initState();

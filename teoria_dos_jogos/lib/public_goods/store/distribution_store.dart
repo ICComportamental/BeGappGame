@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
-import 'package:teoria_dos_jogos/classes/time_taken_tutorial_pg.dart';
 import 'package:teoria_dos_jogos/public_goods/classes/publicGoodsVariables.dart';
-import 'package:teoria_dos_jogos/public_goods/store/round_data_store.dart';
 import 'package:teoria_dos_jogos/public_goods/widgets/moneyDistribution.dart';
 part 'distribution_store.g.dart';
 

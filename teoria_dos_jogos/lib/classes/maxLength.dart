@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'maxLength.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable()
 class MaxLength {
   @JsonKey(fromJson: _stringToInt, toJson: _stringFromInt)
   final int? CHARACTER_MAXIMUM_LENGTH;

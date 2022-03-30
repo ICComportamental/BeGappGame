@@ -1,5 +1,4 @@
 import 'package:circle_list/circle_list.dart';
-import 'package:circle_list/radial_drag_gesture_detector.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';

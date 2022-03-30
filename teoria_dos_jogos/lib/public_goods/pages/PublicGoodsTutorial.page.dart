@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -61,7 +63,7 @@ class _PublicGoodsTutorialPageState extends State<PublicGoodsTutorialPage> {
 
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));
@@ -73,7 +75,8 @@ class _PublicGoodsTutorialPageState extends State<PublicGoodsTutorialPage> {
 
   @override
   void dispose() {
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.black26,
     ));
@@ -93,7 +96,7 @@ class _PublicGoodsTutorialPageState extends State<PublicGoodsTutorialPage> {
     // i = 31;
     // int i = 14;// ao investir..
 
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     double screenWidth = Resize.getWidth(context);
     double screenHeight = Resize.getHeight(context);
     double fontsize = screenHeight / 30;

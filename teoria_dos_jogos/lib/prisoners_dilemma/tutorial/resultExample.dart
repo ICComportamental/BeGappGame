@@ -1,9 +1,12 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/classes/dilemmaVariables.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/widgets/dilemmaCard.dart';
 
+// ignore: must_be_immutable
 class DilemmaResultExample extends StatelessWidget {
   String yourChoice;
   String otherChoice;
@@ -18,7 +21,6 @@ class DilemmaResultExample extends StatelessWidget {
   Widget build(BuildContext context) {
     double fontSize = Resize.getHeight(context) * 0.06;
     double height = Resize.getHeight(context);
-    double width = MediaQuery.of(context).size.aspectRatio * 75;
     if (your == Colors.red && other == Colors.red) {
       txt1 = variables.bothCooperate.toString();
       txt2 = variables.bothCooperate.toString();

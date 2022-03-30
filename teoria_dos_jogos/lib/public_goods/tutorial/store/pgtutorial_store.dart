@@ -122,7 +122,7 @@ abstract class _TutorialGameStoreBase with Store {
                     fontSize: MediaQuery.of(context).size.height / 20),
               ),
               actions: [
-                FlatButton(
+                TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                       Navigator.of(context).pop();

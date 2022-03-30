@@ -1,4 +1,4 @@
-import 'dart:math';
+// ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';

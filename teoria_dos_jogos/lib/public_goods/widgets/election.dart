@@ -41,7 +41,6 @@ class _ElectionPopUpState extends State<ElectionPopUp> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     if (widget.electionTime != null) {
       Duration d = DateTime.now().difference(start);
       if (d.inSeconds > widget.time) d = Duration(seconds: widget.time);

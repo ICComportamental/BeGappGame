@@ -10,7 +10,6 @@ class SoundEffects {
       await player.setAsset('assets/$path');
       player.play();
     } else if (UniversalPlatform.isWeb) {
-      var duration = await player.setAsset(path);
       player.play();
     }
     // if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {

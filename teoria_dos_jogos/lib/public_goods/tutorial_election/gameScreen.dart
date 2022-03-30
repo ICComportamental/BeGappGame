@@ -1,9 +1,7 @@
 import 'dart:math';
 
 import 'package:circle_list/circle_list.dart';
-import 'package:flare_flutter/flare_actor.dart';
 
-import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -36,7 +34,7 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     game = new Game(
       new User(),
       widget.variables,

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/public_goods/classes/publicGoodsVariables.dart';
 import 'package:teoria_dos_jogos/public_goods/store/round_data_store.dart';

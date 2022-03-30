@@ -12,7 +12,6 @@ import 'package:teoria_dos_jogos/AppLanguage.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/connection.dart';
 import 'package:teoria_dos_jogos/classes/maxLength.dart';
-import 'package:teoria_dos_jogos/classes/user.dart';
 import 'package:teoria_dos_jogos/pages/UserForms.page.dart';
 import 'package:teoria_dos_jogos/pages/pdf.page.dart';
 import 'package:teoria_dos_jogos/pages/welcome.page.dart';
@@ -24,7 +23,6 @@ import 'package:teoria_dos_jogos/classes/rotation.dart';
 import 'package:universal_platform/universal_platform.dart';
 
 import 'classes/Database.dart';
-import 'prisoners_dilemma/pages/tutorial.page.dart';
 import 'package:http/http.dart' as http;
 
 const _filesToWarmup = [
@@ -49,7 +47,6 @@ void main() async {
   AppLanguage appLanguage = AppLanguage();
   await appLanguage.fetchLocale();
   FlareCache.doesPrune = false;
-  List jsonHelp;
   //jsonHelp = await Database.validateKey("pddd6fc");
   // jsonHelp = await Database.validateKey("pg12326");
   // jsonHelp = await Database.validateKey("pg4");
@@ -72,7 +69,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // SystemChrome.setEnabledSystemUIOverlays([]);
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
 
     return ChangeNotifierProvider<AppLanguage>(
       create: (_) => appLanguage,
@@ -136,6 +132,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class ChooseGamePage extends StatefulWidget {
   List? jsonHelp;
   ChooseGamePage({Key? key, required this.title, this.jsonHelp})
@@ -236,7 +233,7 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
           variables = PublicGoodsVariables.fromJson(jsonList[0]);
           game = "PublicGoods";
         } else {
-          var json = jsonList[0];
+          //var json = jsonList[0];
 
           variables = DilemmaVariables.fromJson(jsonList[0]);
           game = "PrisonerDilemma";
@@ -530,7 +527,7 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      RaisedButton(
+                      TextButton(
                         onPressed: () {
                           setState(() {
                             appLanguage.changeLanguage(Locale("en"));
@@ -538,7 +535,7 @@ class _ChooseGamePageState extends State<ChooseGamePage> {
                         },
                         child: Text('English'),
                       ),
-                      RaisedButton(
+                      TextButton(
                         onPressed: () {
                           setState(() {
                             appLanguage.changeLanguage(Locale("pt"));

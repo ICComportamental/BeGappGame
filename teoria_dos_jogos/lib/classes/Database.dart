@@ -93,7 +93,7 @@ class Database {
       }
       int round = i + 1;
       String theUrl = 'https://v1.begapp.com.br/dilemma/InsertRound.php';
-      var res = await http.post(Uri.parse(theUrl), headers: {
+      await http.post(Uri.parse(theUrl), headers: {
         "Accept": "application/json"
       }, body: {
         "round": round.toString(),
@@ -103,16 +103,15 @@ class Database {
         "cooperate": cooperate.toString(),
         "defect": compete.toString()
       });
-      String s = "rodada: " +
-          round.toString() +
-          " pc: " +
-          rounds[i].oponentChoice.toString() +
-          " usuario: " +
-          rounds[i].userChoice.toString() +
-          " userid: " +
-          userId +
-          "\n";
-      var resBody = jsonDecode(res.body);
+      // String s = "rodada: " +
+      //     round.toString() +
+      //     " pc: " +
+      //     rounds[i].oponentChoice.toString() +
+      //     " usuario: " +
+      //     rounds[i].userChoice.toString() +
+      //     " userid: " +
+      //     userId +
+      //     "\n";
     }
   }
 

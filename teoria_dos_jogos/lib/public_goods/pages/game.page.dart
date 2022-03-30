@@ -17,7 +17,6 @@ import 'package:teoria_dos_jogos/public_goods/classes/publicGoodsVariables.dart'
 import 'package:teoria_dos_jogos/public_goods/store/game_store.dart';
 import 'package:teoria_dos_jogos/public_goods/store/round_data_store.dart';
 import 'package:teoria_dos_jogos/public_goods/store/runningNumbers.dart';
-import 'package:teoria_dos_jogos/public_goods/widgets/moneyDistribution.dart';
 import 'package:teoria_dos_jogos/public_goods/widgets/token.dart';
 import 'package:teoria_dos_jogos/widgets/clock.dart';
 import 'package:teoria_dos_jogos/widgets/panel.dart';
@@ -42,7 +41,7 @@ class _PublicGoodsGamePageState extends State<PublicGoodsGamePage> {
   late Game game;
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));

@@ -72,7 +72,6 @@ class Connection {
                     FutureBuilder(
                       future: checkConnection(context),
                       builder: (BuildContext context, AsyncSnapshot snapshot) {
-                        List snap = snapshot.data;
                         if (snapshot.connectionState ==
                             ConnectionState.waiting) {
                           return Center(
@@ -90,7 +89,7 @@ class Connection {
                                       MediaQuery.of(context).size.height / 30),
                             ),
                             actions: [
-                              FlatButton(
+                              TextButton(
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -132,7 +131,7 @@ class Connection {
                       ),
                     ]),
                 actions: [
-                  FlatButton(
+                  TextButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },

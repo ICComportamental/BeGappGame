@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
-import 'package:teoria_dos_jogos/public_goods/tutorial_distribution/distributionSimulation.dart';
 import 'package:teoria_dos_jogos/public_goods/tutorial_distribution/instruction.dart';
 import 'package:teoria_dos_jogos/public_goods/tutorial_distribution/players_moneyBag.dart';
 

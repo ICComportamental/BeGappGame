@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 
+// ignore: must_be_immutable
 class PlayersRibRepresentation extends StatefulWidget {
   double value;
   PlayersRibRepresentation(this.value);

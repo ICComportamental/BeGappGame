@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'dilemmaCard.dart';
 
+// ignore: must_be_immutable
 class AnimatedCard extends StatefulWidget {
   Color color;
   Function onEnd;

@@ -6,6 +6,7 @@ import 'package:teoria_dos_jogos/prisoners_dilemma/widgets/dilemmaCard.dart';
 
 import 'animatedResult.dart';
 
+// ignore: must_be_immutable
 class ResultsMatrix extends StatefulWidget {
   double p;
   bool animate;
@@ -25,7 +26,6 @@ class _ResultsMatrixState extends State<ResultsMatrix> {
     double height = Resize.getHeight(context);
     double width = Resize.getWidth(context);
     // width = (ratio > 2) ? width = height * 2 : width;
-    double longestSide = MediaQuery.of(context).size.longestSide;
     double fontsize = width * 0.02;
     // longestSide == width ? longestSide * 0.02 : longestSide * 0.04;
     opacity = widget.result == "" ? 1 : 0.3;

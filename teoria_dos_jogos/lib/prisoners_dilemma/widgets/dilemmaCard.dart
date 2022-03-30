@@ -1,7 +1,9 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 
+// ignore: must_be_immutable
 class DilemmaCard extends StatelessWidget {
   Color color;
   Color borderColor;

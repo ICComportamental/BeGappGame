@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:async';
 // import 'dart:convert';
 import 'dart:typed_data';
@@ -62,14 +64,15 @@ class _GraphicPagePGState extends State<GraphicPagePG> {
   @override
   void initState() {
     portraitModeOnly();
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     super.initState();
   }
 
   @override
   void dispose() {
     landscapeModeOnly();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     super.dispose();
   }
 
@@ -115,7 +118,7 @@ class _GraphicPagePGState extends State<GraphicPagePG> {
           ),
 
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            RaisedButton(
+            TextButton(
                 child: Row(
                   children: [Text("Pdf  "), Icon(Icons.picture_as_pdf)],
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +128,7 @@ class _GraphicPagePGState extends State<GraphicPagePG> {
                   img = Image.memory(bytes);
                   Pdf().createPdf(bytes);
                 }),
-            RaisedButton(
+            TextButton(
                 child: Row(
                   children: [Text("Excel  "), Icon(Icons.save)],
                   mainAxisAlignment: MainAxisAlignment.center,

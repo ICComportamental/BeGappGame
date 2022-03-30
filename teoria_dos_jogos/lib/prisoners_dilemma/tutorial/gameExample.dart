@@ -4,7 +4,6 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 import 'package:teoria_dos_jogos/classes/rotation.dart';
-import 'package:teoria_dos_jogos/classes/user.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/classes/dilemmaVariables.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/widgets/animatedCard.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/widgets/dilemmaCard.dart';
@@ -38,9 +37,8 @@ class _DilemmaGameTutorialState extends State<DilemmaGameTutorial> {
   bool hideVariables = true;
   @override
   void initState() {
-    // TODO: implement initState
     landscapeModeOnly();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     super.initState();
 
     game.variables = widget.variables;
@@ -59,7 +57,7 @@ class _DilemmaGameTutorialState extends State<DilemmaGameTutorial> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     double p = 0.4;
     double width = Resize.getWidth(context);
     double height = Resize.getHeight(context);

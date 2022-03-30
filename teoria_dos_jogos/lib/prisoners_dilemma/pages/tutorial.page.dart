@@ -33,9 +33,8 @@ class _DilemmaTutorialPageState extends State<DilemmaTutorialPage> {
   PDTimeTutorial timeTutorial = new PDTimeTutorial();
   @override
   void initState() {
-    // TODO: implement initState
     landscapeModeOnly();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));
@@ -45,7 +44,6 @@ class _DilemmaTutorialPageState extends State<DilemmaTutorialPage> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     portraitModeOnly();
     // SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);

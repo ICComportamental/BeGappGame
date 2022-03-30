@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
 //import 'dart:math' as math;
 
+// ignore: must_be_immutable
 class Count extends StatefulWidget {
   final Function animationEnds;
   final bool down;

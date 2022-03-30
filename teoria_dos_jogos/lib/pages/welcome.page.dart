@@ -11,9 +11,8 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
   @override
   void initState() {
-    // TODO: implement initState
     portraitModeOnly();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     Future.delayed(Duration(seconds: 3), () async {
       // Navigator.of(context).pop();
       Navigator.pushReplacement(

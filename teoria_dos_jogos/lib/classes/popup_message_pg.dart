@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:teoria_dos_jogos/classes/myconverter.dart';
 part 'popup_message_pg.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable()
 class PopUpMessagePublicGoods {
   @JsonKey(fromJson: MyConverter.stringToInt, toJson: MyConverter.stringFromInt)
   final int id;

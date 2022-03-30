@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:device_info/device_info.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +7,6 @@ import 'package:teoria_dos_jogos/app_localizations.dart';
 import 'package:teoria_dos_jogos/classes/Database.dart';
 import 'package:teoria_dos_jogos/classes/maxLength.dart';
 import 'package:teoria_dos_jogos/classes/user.dart';
-import 'package:teoria_dos_jogos/prisoners_dilemma/pages/game.page.dart';
 import 'package:teoria_dos_jogos/prisoners_dilemma/pages/tutorial.page.dart';
 import 'package:teoria_dos_jogos/public_goods/pages/PublicGoodsTutorial.page.dart';
 import 'package:universal_platform/universal_platform.dart';
@@ -59,6 +57,7 @@ class _UserFormsState extends State<UserForms> {
     if (value.isEmpty) {
       return AppLocalizations.of(context).translate('Required field');
     }
+    return null;
     // return "";
   }
 
@@ -66,15 +65,13 @@ class _UserFormsState extends State<UserForms> {
     if (value.isEmpty) {
       return AppLocalizations.of(context).translate('Required field');
     }
-    if (!nickAvailable)
-      return "Nome indisponível"; //AppLocalizations.of(context).translate('Required field');
+    if (!nickAvailable) return "Nome indisponível";
+    return null; //AppLocalizations.of(context).translate('Required field');
     // return "";
   }
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
     double longestSide = MediaQuery.of(context).size.longestSide;
     bool landscape = MediaQuery.of(context).size.aspectRatio > 1.5;
     // longestSide == screenWidth;
@@ -338,7 +335,7 @@ class _UserFormsState extends State<UserForms> {
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () async {
                       Navigator.push(
                           context,

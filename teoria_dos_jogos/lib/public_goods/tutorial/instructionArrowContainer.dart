@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:teoria_dos_jogos/classes/resize.dart';
-
-import '../../AppLanguage.dart';
 
 class InstructionArrow extends StatelessWidget {
   final String instructiontxt;
