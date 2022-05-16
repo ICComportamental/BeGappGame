@@ -26,11 +26,11 @@ import 'classes/Database.dart';
 import 'package:http/http.dart' as http;
 
 const _filesToWarmup = [
-  "assets/flare/Coins.flr",
-  "assets/flare/RedButton.flr",
-  "assets/flare/BlackButton.flr",
-  "assets/flare/Clock.flr",
-  "assets/CoinsShort.flr"
+  "flare/Coins.flr",
+  "flare/RedButton.flr",
+  "flare/BlackButton.flr",
+  "flare/Clock.flr",
+  "CoinsShort.flr"
 ];
 
 Future<void> warmupFlare() async {
