@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // SystemChrome.setEnabledSystemUIOverlays([]);
-
+    print("teste OK");
     return ChangeNotifierProvider<AppLanguage>(
       create: (_) => appLanguage,
       child: Consumer<AppLanguage>(builder: (context, model, child) {
