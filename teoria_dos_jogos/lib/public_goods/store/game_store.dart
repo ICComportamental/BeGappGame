@@ -31,7 +31,7 @@ class Game = _GameBase with _$Game;
 abstract class _GameBase with Store {
   final PublicGoodsVariables
       variables; // = new PublicGoodsVariables("default",10,10,3,10,0,5,"default","jogo padrão");
-  bool armazenarBD = false;
+  bool armazenarBD = true;
   final User user;
   PGTimeTutorial? timeTutorial = new PGTimeTutorial();
   final List<PopUpMessagePublicGoods>? messages;
