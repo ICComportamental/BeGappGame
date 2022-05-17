@@ -337,11 +337,11 @@ class _UserFormsState extends State<UserForms> {
                   ),
                   child: TextButton(
                     onPressed: () async {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => PublicGoodsTutorialPage(
-                                  null, widget.variables)));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => PublicGoodsTutorialPage(
+                      //             null, widget.variables)));
                       if (_formKey.currentState!.validate()) {
                         user.name = txtName.text;
                         (txtAge.text == "")
@@ -372,7 +372,7 @@ class _UserFormsState extends State<UserForms> {
                         }
                         //armazenando usuario no banco
                         user.id = await Database.insertUser(user);
-
+                        print("USER GET ID{${user.id}}");
                         Navigator.push(
                             context,
                             MaterialPageRoute(

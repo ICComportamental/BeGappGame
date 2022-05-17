@@ -20,7 +20,7 @@ import 'package:teoria_dos_jogos/classes/rotation.dart';
 import 'package:teoria_dos_jogos/widgets/popUpWithTimer.dart';
 
 class PublicGoodsTutorialPage extends StatefulWidget {
-  final User? user;
+  final User user;
   final PublicGoodsVariables
       goodsVariables; // = PublicGoodsVariables("",10,10,3,10,0,5,"default","jogo padrão");
   PublicGoodsTutorialPage(this.user, this.goodsVariables);
@@ -171,8 +171,7 @@ class _PublicGoodsTutorialPageState extends State<PublicGoodsTutorialPage> {
                                               MaterialPageRoute(
                                                   builder: (context) =>
                                                       PublicGoodsGamePage(
-                                                          // widget.user!
-                                                          User(),
+                                                          widget.user,
                                                           widget.goodsVariables,
                                                           timeTutorial,
                                                           messages)));

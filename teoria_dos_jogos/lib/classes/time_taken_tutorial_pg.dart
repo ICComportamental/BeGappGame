@@ -1,9 +1,9 @@
 class PGTimeTutorial {
   int? userId;
-  Duration? total;
-  Duration? main;
-  Duration? distribution;
-  Duration? election;
+  Duration total = Duration();
+  Duration main = Duration();
+  Duration distribution = Duration();
+  Duration election = Duration();
   int sawMain = 1;
   int sawDistribution = 1;
   int sawElection = 1;

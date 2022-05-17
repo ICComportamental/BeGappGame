@@ -1,9 +1,9 @@
 class PGTimeRound {
   int? userId;
   int? round;
-  Duration? dragToken;
-  Duration? distribution;
-  Duration? election;
+  Duration dragToken = Duration();
+  Duration distribution = Duration();
+  Duration election = Duration();
 
   setDragToken(Duration duration) {
     dragToken = duration;

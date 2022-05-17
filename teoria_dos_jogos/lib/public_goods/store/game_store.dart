@@ -306,6 +306,7 @@ abstract class _GameBase with Store {
 
     // var userId= await Database.insertUser(user);
     var userId = user.id;
+    print(userId);
     RoundData r = rounds.last;
     // rounds.forEach((r) {
     int suspended = r.suspended ? 1 : 0;

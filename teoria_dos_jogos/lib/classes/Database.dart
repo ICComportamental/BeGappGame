@@ -24,6 +24,7 @@ class Database {
   }
 
   static insert(String query) async {
+    print(query);
     String url = "https://v1.begapp.com.br/insert.php";
     var res = await http.post(Uri.parse(url),
         headers: {"Accept": "application/json"}, body: {"query": query});

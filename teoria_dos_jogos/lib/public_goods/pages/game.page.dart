@@ -82,6 +82,7 @@ class _PublicGoodsGamePageState extends State<PublicGoodsGamePage> {
 
   @override
   Widget build(BuildContext context) {
+    print("${widget.user.id} USER");
     double screenHeight = Resize.getHeight(context);
     double screenWidth = Resize.getWidth(context);
     game.pulseTheClock();
