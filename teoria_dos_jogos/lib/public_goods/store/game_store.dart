@@ -24,6 +24,8 @@ import 'package:teoria_dos_jogos/public_goods/store/runningNumbers.dart';
 import 'package:teoria_dos_jogos/public_goods/widgets/electionAnimation.dart';
 import 'package:teoria_dos_jogos/widgets/nextAnimation.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../pages/welcome.page.dart';
 part 'game_store.g.dart';
 
 class Game = _GameBase with _$Game;
@@ -283,6 +285,8 @@ abstract class _GameBase with Store {
                   onWillPop: () async {
                     Navigator.of(context).pop();
                     Navigator.of(context).pop();
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => WelcomePage()));
                     return true;
                   }),
               // actions: [

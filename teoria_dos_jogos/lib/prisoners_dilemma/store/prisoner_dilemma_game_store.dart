@@ -17,6 +17,8 @@ import 'package:teoria_dos_jogos/public_goods/pages/messagePage.dart';
 import 'package:teoria_dos_jogos/widgets/nextAnimation.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../pages/welcome.page.dart';
 part 'prisoner_dilemma_game_store.g.dart';
 
 class PrisonerDilemmaGame = _PrisonerDilemmaGameBase with _$PrisonerDilemmaGame;
@@ -405,6 +407,8 @@ abstract class _PrisonerDilemmaGameBase with Store {
                           fontSize: MediaQuery.of(context).size.width / 25),
                     ),
                     onPressed: () async {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => WelcomePage()));
                       // Navigator.of(context).push(
                       //   MaterialPageRoute(
                       //     builder: (context)=>
