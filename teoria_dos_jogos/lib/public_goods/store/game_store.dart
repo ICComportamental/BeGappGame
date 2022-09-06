@@ -279,8 +279,13 @@ abstract class _GameBase with Store {
                                   color: Colors.lightBlue,
                                   fontSize: Resize.getHeight(context) / 20),
                             ),
-                            onTap: () =>
-                                launch('https://forms.gle/86uhyWx4SgX2v6To6'))
+                            onTap: () {
+                              launch('https://forms.gle/86uhyWx4SgX2v6To6');
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => WelcomePage()));
+                            })
                       ]),
                   onWillPop: () async {
                     Navigator.of(context).pop();

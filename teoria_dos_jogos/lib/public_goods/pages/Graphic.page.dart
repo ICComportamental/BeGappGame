@@ -19,6 +19,8 @@ import 'package:teoria_dos_jogos/public_goods/widgets/graphicDoubleYAxis.dart';
 import 'package:teoria_dos_jogos/classes/rotation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../pages/welcome.page.dart';
+
 class GraphicPagePG extends StatefulWidget {
   final List<RoundData>? gameRounds;
   final PublicGoodsVariables? variables;
@@ -162,8 +164,13 @@ class _GraphicPagePGState extends State<GraphicPagePG> {
                             color: Colors.lightBlue,
                             fontSize: fontSize),
                       ),
-                      onTap: () =>
-                          launch('https://forms.gle/TQczEbJLMJPdqxQa6'))
+                      onTap: () {
+                        launch('https://forms.gle/TQczEbJLMJPdqxQa6');
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WelcomePage()));
+                      })
                 ],
               ))
         ],
